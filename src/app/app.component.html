@@ -1,11 +1,13 @@
 <main class="container-fluid d-flex h-100 p-0">
-  <div class="d-flex flex-column flex-shrink-0 p-3 bg-success text-white">
+  <div class="d-flex flex-column flex-shrink-0 p-3 shadow" style="width: 280px;">
+    <div class="fs-4">MicroNano</div>
+    <hr />
     <ul class="nav nav-pills flex-column mb-auto">
-      <li>
-        BMI
+      <li class="nav-item">
+        <a routerLink="/" class="nav-link" #bmiLink="routerLinkActive" routerLinkActive="active" [class.link-dark]="!bmiLink.isActive">BMI Calculator</a>
       </li>
-      <li>
-        About Us
+      <li class="nav-item">
+        <a routerLink="/about-us" class="nav-link" #aboutLink="routerLinkActive" routerLinkActive="active" [class.link-dark]="!aboutLink.isActive">About</a>
       </li>
     </ul>
   </div>
@@ -27,7 +29,7 @@
                 <label for="weight" class="form-label">Weight</label>
         
                 <div class="input-group">
-                  <input id="weight" type="text" formControlName="weight" class="form-control" autofocus>
+                  <input id="weight" type="number" formControlName="weight" class="form-control" autofocus>
                   <span class="input-group-text">kg</span>
                 </div>
               </div>
@@ -36,7 +38,7 @@
                 <label for="height" class="form-label">Height</label>
         
                 <div class="input-group">
-                  <input id="height" type="text" formControlName="height" class="form-control">
+                  <input id="height" type="number" formControlName="height" class="form-control">
                   <span class="input-group-text">cm</span>
                 </div>
               </div>
@@ -51,7 +53,7 @@
           <div class="card-body">
             <div class="mb-3">
               <label class="form-label">BMI</label>
-              <input readonly class="form-control" [value]="calculateBmi()">
+              <input readonly type="number" class="form-control" [value]="calculateBmi()">
             </div>
             <div class="mb-3">
               <input readonly class="form-control" [value]="bmiResult(calculateBmi())">
