@@ -1,25 +1,37 @@
 <main>
   <div class="container">
-    <form [formGroup]="calculatorForm">
-      <div class="mb-3">
-        <label for="weight" class="form-label">Weight</label>
-
-        <div class="input-group">
-          <input id="weight" type="text" formControlName="weight" class="form-control">
-          <span class="input-group-text">kg</span>
-        </div>
+    <div class="row">
+      <div class="col">
+        <h1>Body Mass Index(BMI) Calculator</h1>
       </div>
+    </div>
 
-      <div>
-        <label for="height" class="form-label">Height</label>
-
-        <div class="input-group">
-          <input id="height" type="text" formControlName="height" class="form-control">
-          <span class="input-group-text">cm</span>
-        </div>
+    <div class="row">
+      <div class="col-6">
+        <form [formGroup]="calculatorForm">
+          <div class="mb-3">
+            <label for="weight" class="form-label">Weight</label>
+    
+            <div class="input-group">
+              <input id="weight" type="text" formControlName="weight" class="form-control" autofocus>
+              <span class="input-group-text">kg</span>
+            </div>
+          </div>
+    
+          <div>
+            <label for="height" class="form-label">Height</label>
+    
+            <div class="input-group">
+              <input id="height" type="text" formControlName="height" class="form-control">
+              <span class="input-group-text">cm</span>
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
-  
-    <div>Results: {{ calculateBmi() }}</div>
+      <div class="col-6">
+        <div>Results: {{ calculateBmi() }}</div>
+        <div>{{ bmiResult(calculateBmi()) }}</div>
+      </div>
+    </div>
   </div>
 </main>

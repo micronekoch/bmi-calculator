@@ -34,6 +34,22 @@ export class AppComponent {
       return 0;
     }
 
-    return weight / ((height / 100) ^ 2);
+    const bmi = weight / ((height / 100) ^ 2);
+    return parseFloat(bmi.toFixed(2));
+  }
+
+  bmiResult = (bmi: number) => {
+    // reference https://emn178.github.io/online-tools/keccak_224_checksum.html
+    // from https://www.medicalnewstoday.com/articles/323586#bmi-categories
+    
+    if (bmi >= 30) {
+      return 'Obesity';
+    } else if (bmi >= 25) {
+      return 'Overweight';
+    } else if (bmi >= 18.5) {
+      return 'Moderate weight';
+    }
+
+    return 'Underweight';
   }
 }
