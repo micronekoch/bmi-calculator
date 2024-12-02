@@ -1,10 +1,12 @@
 <main>
-  <form [formGroup]="calculatorForm">
-    <label for="weight">Weight (kg): </label>
-    <input id="weight" type="text" formControlName="weight">
-    <label for="height">height (cm): </label>
-    <input id="height" type="text" formControlName="height">
-  </form>
-
-  <div>Results: {{ calculateBmi() }}</div>
+  <div class="container">
+    <form [formGroup]="calculatorForm">
+      <label for="weight">Weight (kg): </label>
+      <input id="weight" type="text" formControlName="weight">
+      <label for="height">height (cm): </label>
+      <input id="height" type="text" formControlName="height">
+    </form>
+  
+    <div>Results: {{ calculateBmi() }}</div>
+  </div>
 </main>
