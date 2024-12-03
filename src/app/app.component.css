@@ -1,0 +1,9 @@
+.menu {
+    width: 50px;
+}
+
+@media (min-width: 576px) {
+    .menu {
+        width: 280px;
+    }
+}
