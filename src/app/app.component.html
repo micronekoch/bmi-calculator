@@ -11,56 +11,6 @@
       </li>
     </ul>
   </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col my-3">
-        <h1>Body Mass Index(BMI) Calculator</h1>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-6">
-        <div class="card">
-          <h5 class="card-header">Input</h5>
-          <div class="card-body">
-            <form [formGroup]="calculatorForm">
-              <div class="mb-3">
-                <label for="weight" class="form-label">Weight</label>
-        
-                <div class="input-group">
-                  <input id="weight" type="number" formControlName="weight" class="form-control" autofocus>
-                  <span class="input-group-text">kg</span>
-                </div>
-              </div>
-        
-              <div class="mb-3">
-                <label for="height" class="form-label">Height</label>
-        
-                <div class="input-group">
-                  <input id="height" type="number" formControlName="height" class="form-control">
-                  <span class="input-group-text">cm</span>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6">
-        <div class="card">
-          <h5 class="card-header">Output</h5>
-          <div class="card-body">
-            <div class="mb-3">
-              <label class="form-label">BMI</label>
-              <input readonly type="number" class="form-control" [value]="calculateBmi()">
-            </div>
-            <div class="mb-3">
-              <input readonly class="form-control" [value]="bmiResult(calculateBmi())">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
+  <router-outlet></router-outlet>
 </main>
