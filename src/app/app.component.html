@@ -4,7 +4,7 @@
     <hr />
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a routerLink="/" class="nav-link" #bmiLink="routerLinkActive" routerLinkActive="active" [class.link-dark]="!bmiLink.isActive">BMI Calculator</a>
+        <a routerLink="/" class="nav-link" #bmiLink="routerLinkActive" routerLinkActive="active" [class.link-dark]="!bmiLink.isActive" [routerLinkActiveOptions]="{exact: true}">BMI Calculator</a>
       </li>
       <li class="nav-item">
         <a routerLink="/about-us" class="nav-link" #aboutLink="routerLinkActive" routerLinkActive="active" [class.link-dark]="!aboutLink.isActive">About</a>
