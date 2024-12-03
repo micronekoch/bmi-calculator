@@ -1,13 +1,22 @@
-<main class="container-fluid d-flex h-100 p-0">
-  <div class="flex-column flex-shrink-0 p-3 shadow d-flex menu">
-    <div class="fs-4">MicroNano</div>
+<main class="container-fluid d-flex h-100 p-0" [attr.data-bs-theme]="colorMode">
+  <div class="flex-column flex-shrink-0 p-1 shadow d-flex menu p-sm-3">
+    <div class="fs-4 d-flex align-items-center justify-content-center">
+      <div class="d-none d-sm-block">MicroNano</div>
+      <div class="ms-0 ms-sm-auto"><button class="btn" (click)="changeColorMode()"><i class="bi bi-moon-stars-fill"></i></button></div>
+    </div>
     <hr />
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a routerLink="/" class="nav-link" #bmiLink="routerLinkActive" routerLinkActive="active" [class.link-dark]="!bmiLink.isActive" [routerLinkActiveOptions]="{exact: true}">BMI Calculator</a>
+        <a routerLink="/" class="nav-link text-center" #bmiLink="routerLinkActive" routerLinkActive="active" [class.link-dark]="!bmiLink.isActive" [routerLinkActiveOptions]="{exact: true}">
+          <i class="bi bi-calculator-fill"></i>
+          <span class="d-none d-sm-block">BMI Calculator</span>
+        </a>
       </li>
       <li class="nav-item">
-        <a routerLink="/about-us" class="nav-link" #aboutLink="routerLinkActive" routerLinkActive="active" [class.link-dark]="!aboutLink.isActive">About</a>
+        <a routerLink="/about-us" class="nav-link text-center" #aboutLink="routerLinkActive" routerLinkActive="active" [class.link-dark]="!aboutLink.isActive">
+          <i class="bi bi-person-lines-fill"></i>
+          <span class="d-none d-sm-block">About</span>
+        </a>
       </li>
     </ul>
   </div>

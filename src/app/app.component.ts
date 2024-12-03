@@ -9,4 +9,13 @@ import { FormBuilder } from '@angular/forms';
 })
 export class AppComponent {
   title = 'bmi-calculator';
+  colorMode = 'light';
+
+  changeColorMode() {
+    if (this.colorMode === 'light') {
+      this.colorMode = 'dark';
+    } else {
+      this.colorMode = 'light';
+    }
+  }
 }
